@@ -1,6 +1,6 @@
-import axios from "axios";
+const axios = require("axios");
 
-export default function wiki (bot) {
+function wiki (bot) {
 
     bot.inlineQuery(/q\s.+/, async (ctx) => {
         const input = ctx.inlineQuery.query.split(' ');
@@ -37,3 +37,5 @@ export default function wiki (bot) {
         }
     })
 }
+
+module.exports = wiki

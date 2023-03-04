@@ -1,6 +1,6 @@
-import axios from "axios";
+const axios = require("axios");
 
-export default function pixeby (bot) {
+function pixeby (bot) {
     bot.inlineQuery(/p\s.+/, async (ctx) => {
         const input = ctx.inlineQuery.query.split(' ');
         input.shift();
@@ -30,3 +30,5 @@ export default function pixeby (bot) {
     })
 
 }
+
+module.exports = pixeby
